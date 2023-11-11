@@ -1,0 +1,62 @@
+/* resetting margins and paddings to ensure consistency accross browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+}
+
+/* defining root variables */
+:root {
+  /* defifning font weights as varibles */
+  --small-font: 500;
+  --medium-font: 700;
+  --large-font: 800;
+
+  /* defining colors as variables */
+  --deep-purple: rgba(19, 24, 63, 1);
+  --light-grey: rgba(131, 134, 154, 1);
+  --clear-pink: rgba(255, 167, 195, 1);
+  --clear-white: rgba(255, 255, 255, 1);
+  --almost-blue: rgba(102, 108, 163, 1);
+}
+
+/* styling the browser's body */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* styling for the header section */
+#header-section {
+  display: flex;
+  margin: 1.5rem 6.5rem;
+  padding: 0.25rem;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: pink; */
+}
+
+/* styling for the log box */
+/* .brand-logo-box {
+  background-color: orange;
+} */
+
+/* stlying for the cta box */
+.header-cta-box {
+  width: 8rem;
+  height: 2.5rem;
+  /* background-color: orangered; */
+}
+
+/* styling for the cta button */
+.header-cta-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 3rem;
+  color: var(--clear-white);
+  background-color: var(--deep-purple);
+}
+
