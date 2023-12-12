@@ -24,32 +24,108 @@
     />
 
     <!-- stylesheet -->
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
   </head>
   <body>
-    <header id="header-section">
-      <div class="brand-logo-box">
-        <img src="assets/logo-dark.svg" alt="brand logo light" class="brand-logo brand-logo-lght">
+    <!-- Header section starts here -->
+    <header id="header">
+      <div class="top">
+        <img class="logo" src="assets/logo-dark.svg" alt="skilled" />
+        <button class="cta-button purple-button">Get Started</button>
       </div>
-      <div class="header-cta-box">
-        <button class="header-cta-button">Get Started</button>
+      <div class="hero-container">
+        <div class="info">
+          <h1>Maximize skill, minimize budget</h1>
+          <p>
+            Our modern courses across a range of in-demand skills will give you
+            the knowledge you need to live the life you want.
+          </p>
+          <button class="cta-button orange-button">Get Started</button>
+        </div>
+        <picture>
+          <source
+            srcset="assets/image-hero-mobile@2x.png"
+            media="(max-width: 43.99em)"
+          />
+          <source
+            srcset="assets/image-hero-tablet@2x.png"
+            media="(max-width: 75.99em)"
+          />
+          <source
+            srcset="assets/image-hero-desktop@2x.png"
+            media="(min-width: 90em)"
+          />
+          <img
+            class="hero-image"
+            src="assets/image-hero-mobile@2x.png"
+            alt="hero image"
+          />
+        </picture>
       </div>
     </header>
-    <hero>
-      <div class="text-box"></div>
-    </hero>
-    <!-- Get Started Maximize skill, minimize budget Our modern courses across a
-    range of in-demand skills will give you the knowledge you need to live the
-    life you want. Get Started Check out our most popular courses! Animation
-    Learn the latest animation techniques to create stunning motion design and
-    captivate your audience. Get Started Design Create beautiful, usable
-    interfaces to help shape the future of how the web looks. Get Started
-    Photography Explore critical fundamentals like lighting, composition, and
-    focus to capture exceptional photos. Get Started Crypto All you need to know
-    to get started investing in crypto. Go from beginner to advanced with this
-    54 hour course. Get Started Business A step-by-step playbook to help you
-    start, scale, and sustain your business without outside investment. Get
-    Started Get Started -->
-    <!-- <img src="assets/image-hero-desktop.webp" alt="header image" class="header-image"> -->
+    <!-- End of the header section -->
+
+    <!-- Main section starts here -->
+    <main id="main">
+      <section class="mobile-heading">
+        <h2>Check out our most popular courses!</h2>
+      </section>
+      <section class="orange-grid-box grid-box">
+        <h2>Check out our most popular courses!</h2>
+      </section>
+      <section class="grid-box course-box">
+        <img class="small-icons" src="assets/icon-animation.svg" alt="" />
+        <h3>Animation</h3>
+        <p>
+          Learn the latest animation techniques to create stunning motion design
+          and captivate your audience.
+        </p>
+        <a>Get Started</a>
+      </section>
+      <section class="grid-box course-box">
+        <img class="small-icons" src="assets/icon-design.svg" alt="Design" />
+        <h3>Design</h3>
+        <p>
+          Create beautiful, usable interfaces to help shape the future of how
+          the web looks.
+        </p>
+        <a>Get Started</a>
+      </section>
+      <section class="grid-box course-box">
+        <img class="small-icons" src="assets/icon-photography.svg" alt="Photography" />
+        <h3>Photography</h3>
+        <p>
+          Explore critical fundamentals like lighting, composition, and focus to
+          capture exceptional photos.
+        </p>
+        <a>Get Started</a>
+      </section>
+      <section class="grid-box course-box">
+        <img class="small-icons" src="assets/icon-crypto.svg" alt="Crypto" />
+        <h3>Crypto</h3>
+        <p>
+          All you need to know to get started investing in crypto. Go from
+          beginner to advanced with this 54 hour course.
+        </p>
+        <a>Get Started</a>
+      </section>
+      <section class="grid-box course-box">
+        <img class="small-icons" src="assets/icon-business.svg" alt="Business" />
+        <h3>Business</h3>
+        <p>
+          A step-by-step playbook to help you
+          start, scale, and sustain your business without outside investment.
+        </p>
+        <a>Get Started</a>
+      </section>
+    </main>
+    <!-- End of the Main Section -->
+
+    <!-- Footer starts here -->
+    <footer id="footer">
+      <img class="logo footer-logo" src="assets/logo-light.svg" alt="skilled" />
+      <button class="cta-button pop-button">Get Started</button>
+    </footer>
+    <!-- End of the Footer Section -->
   </body>
 </html>

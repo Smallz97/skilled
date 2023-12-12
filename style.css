@@ -5,58 +5,341 @@
   box-sizing: border-box;
 }
 
+/* resetting the default stylings of the button */
 button {
   border: none;
 }
 
-/* defining root variables */
 :root {
-  /* defifning font weights as varibles */
+  /* defining font weights as varibles */
   --small-font: 500;
   --medium-font: 700;
   --large-font: 800;
 
-  /* defining colors as variables */
-  --deep-purple: rgba(19, 24, 63, 1);
-  --light-grey: rgba(131, 134, 154, 1);
-  --clear-pink: rgba(255, 167, 195, 1);
-  --clear-white: rgba(255, 255, 255, 1);
-  --almost-blue: rgba(102, 108, 163, 1);
+  /* color specifications in HSL */
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(232, 10%, 56%);
+  --pink: hsl(341, 100%, 83%);
+  --purple: hsl(234, 25%, 52%);
+  --dark-pink: hsl(341, 92%, 62%);
+  --deep-purple: hsl(234, 54%, 16%);
+
+  /* extracted button gradient colors specified in HSL */
+  --blue: hsl(237, 100%, 64%);
+  --orange: hsl(13, 100%, 64%);
+  --magenta: hsl(322, 87%, 55%);
+
+  /* gradients specified in HSL */
+  --pop-gradient: linear-gradient(180deg, var(--blue), var(--magenta));
+  --orange-gradient: linear-gradient(180deg, var(--orange), var(--magenta));
+
+  /* extracted section background gradient colors specification in HSLA */
+  --pale-white: hsla(0, 0%, 100%, 1);
+  --pale-blue: hsla(234, 100%, 97%, 1);
+
+  /* section background gradients specified in HSLA */
+  --bluish-gradient: linear-gradient(180deg, var(--pale-white), var(--pale-blue));
+
+  font-size: 1rem;
 }
 
 /* styling the browser's body */
 body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* justify-content: center; */
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/* styling for the header section */
-#header-section {
+/*  */
+header,
+main,
+footer {
+  width: 100vw;
+}
+
+/*  */
+header,
+main {
+  background: var(--white);
+  padding: 1rem 1rem 0 1rem;
+}
+
+/*  */
+.top {
   display: flex;
-  margin: 1.5rem 6.5rem;
-  padding: 0.25rem;
   align-items: center;
   justify-content: space-between;
-  /* background-color: pink; */
 }
 
-/* styling for the log box */
-/* .brand-logo-box {
-  background-color: orange;
-} */
-
-/* stlying for the cta box */
-.header-cta-box {
-  width: 8rem;
-  height: 2.5rem;
-  /* background-color: orangered; */
+/*  */
+.cta-button {
+  height: 3rem;
+  width: 8.75rem;
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 2rem;
 }
 
-/* styling for the cta button */
-.header-cta-button {
-  width: 100%;
-  height: 100%;
-  border-radius: 3rem;
-  color: var(--clear-white);
+/*  */
+.purple-button {
   background-color: var(--deep-purple);
 }
 
+/*  */
+.hero-container {
+  margin-top: 2.37rem;
+  margin-bottom: 3.12rem;
+}
+
+/*  */
+.info h1 {
+  font-size: 9.375vw;
+  font-weight: var(--large-font);
+}
+
+/*  */
+.info p {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-top: 1.62rem;
+  line-height: 1.625rem;
+  font-weight: var(--small-font);
+}
+
+/*  */
+.orange-button {
+  height: 3.5rem;
+  margin-top: 1.5rem;
+  background: var(--orange-gradient);
+}
+
+/*  */
+picture {
+  display: flex;
+  height: 18.8125rem;
+  position: relative;
+  margin-top: 2.88rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  */
+.hero-image {
+  scale: 110%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+/*  */
+main {
+  padding-top: 0;
+  background: var(--bluish-gradient);
+}
+
+/*  */
+.mobile-heading {
+  display: flex;
+  height: 7.5rem;
+  padding: 1.8rem;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin-bottom: 2.5rem;
+  background: var(--orange-gradient);
+}
+
+/*  */
+.mobile-heading h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--white);
+  font-weight: var(--large-font);
+}
+
+.orange-grid-box {
+  display: none;
+}
+
+/*  */
+.grid-box {
+  padding: 0 1.81rem;
+  position: relative;
+  height: 16.1875rem;
+  border-radius: 1rem;
+  margin-bottom: 2.5rem;
+  background: var(--pale-white);
+  border: 0.2px solid var(--pale-white);
+}
+
+/*  */
+.small-icons {
+  position: absolute;
+  margin-top: -1.75rem;
+}
+
+/* styling the course heading */
+.grid-box h3 {
+  margin-top: 3.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--deep-purple);
+}
+
+/* styling the course text */
+.grid-box p {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.625rem;
+  margin-bottom: 1.5rem;
+  font-weight: var(--small-font);
+}
+
+/* styling the course link-text */
+.grid-box a {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--dark-pink);
+  font-weight: var(--medium-font);
+}
+
+/* styling the footer bar */
+#footer {
+  display: flex;
+  height: 7.5rem;
+  padding: 0 1rem;
+  align-items: center;
+  background: var(--deep-purple);
+  justify-content: space-between;
+}
+
+/* Styling the footer cta button */
+.pop-button {
+  background: var(--pop-gradient);
+}
+
+
+/* styling for tablet screens */
+@media screen and (min-width: 48rem) {
+  /* resizing the padding on the header and main sections to optimize viewing on tablets */
+  header,
+  main {
+    padding: 1.5rem 2.5rem 0 2.5rem;
+  }
+
+  /* restyling the hero container to a flex display to optimize viewing on tablets */
+  .hero-container {
+    display: flex;
+    margin-top: 6.56rem;
+    flex-direction: row;
+    margin-bottom: 13.13rem;
+  }
+
+  /* setting the info container to take up half of the parent container's width */
+  .info {
+    flex-basis: 50%;
+    /* background-color: orange; */
+  }
+
+  /* resizing the page heading to optimize viewing on tablets */
+  .info h1 {
+    font-size: 4.6875vw;
+  }
+
+  /* resizing the top margin of the hero text to optimize viewing on tablets */
+  .info p {
+    margin-top: 1.56rem;
+  }
+
+  /* setting the picture element to take up half of the parent container's width and removing the top margin */
+  picture {
+    margin-top: 0;
+    flex-basis: 50%;
+    /* background-color: pink; */
+  }
+
+  /* restyling the main section to a 2-cloumn grid display to optimize viewing on tablets */
+  main {
+    gap: 0.7rem;
+    display: grid;
+    padding-top: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* resetting the mobile heading to not display on tablet screens */
+  .mobile-heading {
+    display: none;
+  }
+
+  /* restyling the main section heading as a grid box in a grid system to optimize viewing on tablets  */
+  .orange-grid-box {
+    display: flex;
+    color: var(--white);
+    padding-top: 3.5rem;
+    justify-content: center;
+    background: var(--orange-gradient);
+  }
+
+  /* resizing the paddings on the footer section to optimize viewing on tablets */
+  #footer {
+    padding: 0 2.5rem;
+  }
+}
+
+
+/* styling for dektops and large screens */
+@media screen and (min-width: 90rem) {
+  /* resizing the width of the header, main and footer sections to optimize viewing on large screens and dekstops */
+  header,
+  main,
+  footer {
+    width: 98vw;
+  }
+
+  /* resizing the paddings on the header and main sections to optimize viewing on large screens and desktops */
+  header,
+  main {
+    padding: 2.5rem 10.31rem 0 10.31rem;
+  }
+
+  /* resizing the cta buttons to optimize viewing on large screens and dekstops */
+  .cta-button {
+    width: 10.4375rem;
+    height: 3.9375rem;
+  }
+
+  /* resizing the heading text to optimize viewing on large screens and desktops */
+  .info h1 {
+    font-size: 3.5rem;
+  }
+
+  /* resizing the top margin of the hero text to optimize viewing on large screens and desktops */
+  .info p {
+    margin-top: 1.81rem;
+  }
+
+  /* resizing the top margin of the orange button to optimize viewing on large screens and desktops */
+  .orange-button {
+    margin-top: 2.5rem;
+  }
+
+  /* restyling the main section to a 3-cloumn grid display to optimize viewing on large screens and desktops */
+  main {
+    gap: 1.88rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* stlying some animation to display when the grid boxes are hovered on */
+  .course-box:hover {
+    scale: 1.05;
+    background: var(--blue);
+    transition: ease-in-out 2s;
+  }
+
+  /* restyling the paddings on the footer section to optimize viewing on large screens and desktops */
+  #footer {
+    padding: 0 10.32rem;
+  }
+}
