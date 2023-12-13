@@ -31,43 +31,50 @@
     <header id="header">
       <div class="top">
         <img class="logo" src="assets/logo-dark.svg" alt="skilled" />
-        <button class="cta-button purple-button">Get Started</button>
+        <button class="cta-button header-cta-button">Get Started</button>
       </div>
       <div class="hero-container">
-        <div class="info">
+        <div class="text-container">
           <h1>Maximize skill, minimize budget</h1>
           <p>
             Our modern courses across a range of in-demand skills will give you
             the knowledge you need to live the life you want.
           </p>
-          <button class="cta-button orange-button">Get Started</button>
+          <button class="cta-button hero-cta-button">Get Started</button>
         </div>
-        <picture>
-          <source
-            srcset="assets/image-hero-mobile@2x.png"
-            media="(max-width: 43.99em)"
-          />
-          <source
-            srcset="assets/image-hero-tablet@2x.png"
-            media="(max-width: 75.99em)"
-          />
-          <source
-            srcset="assets/image-hero-desktop@2x.png"
-            media="(min-width: 90em)"
-          />
-          <img
-            class="hero-image"
-            src="assets/image-hero-mobile@2x.png"
-            alt="hero image"
-          />
-        </picture>
+        <div class="image-container">
+          <div class="image-wrapper">
+            <picture class="">
+              <source
+                srcset="assets/image-hero-mobile@2x.png"
+                media="(max-width: 43.99em)"
+                class="hero-image"
+              />
+              <source
+                srcset="assets/image-hero-tablet@2x.png"
+                media="(max-width: 75.99em)"
+                class="hero-image"
+              />
+              <source
+                srcset="assets/image-hero-desktop@2x.png"
+                media="(min-width: 80em)"
+                class="hero-image"
+              />
+              <img
+                src="assets/image-hero-mobile@2x.png"
+                alt="hero image"
+                class="hero-image"
+              />
+            </picture>
+          </div>
+        </div>
       </div>
     </header>
     <!-- End of the header section -->
 
     <!-- Main section starts here -->
     <main id="main">
-      <section class="mobile-heading">
+      <section class="main-heading-container">
         <h2>Check out our most popular courses!</h2>
       </section>
       <section class="orange-grid-box grid-box">
@@ -124,7 +131,7 @@
     <!-- Footer starts here -->
     <footer id="footer">
       <img class="logo footer-logo" src="assets/logo-light.svg" alt="skilled" />
-      <button class="cta-button pop-button">Get Started</button>
+      <button class="cta-button footer-cta-button">Get Started</button>
     </footer>
     <!-- End of the Footer Section -->
   </body>

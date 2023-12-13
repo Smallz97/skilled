@@ -20,6 +20,7 @@ button {
   --white: hsl(0, 0%, 100%);
   --gray: hsl(232, 10%, 56%);
   --pink: hsl(341, 100%, 83%);
+  --yellow: hsl(60, 100%, 50%);
   --purple: hsl(234, 25%, 52%);
   --dark-pink: hsl(341, 92%, 62%);
   --deep-purple: hsl(234, 54%, 16%);
@@ -46,34 +47,34 @@ button {
 /* styling the browser's body */
 body {
   display: flex;
+  overflow-x: hidden;
   align-items: center;
   flex-direction: column;
-  /* justify-content: center; */
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-/*  */
+/* sizing the header, main and footer sections to take the full width of the device */
 header,
 main,
 footer {
   width: 100vw;
 }
 
-/*  */
+/* styling the header and main sections with a background and padding */
 header,
 main {
   background: var(--white);
   padding: 1rem 1rem 0 1rem;
 }
 
-/*  */
+/* styling the top of navigation container */
 .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/*  */
+/* styling the cta button */
 .cta-button {
   height: 3rem;
   width: 8.75rem;
@@ -82,25 +83,25 @@ main {
   border-radius: 2rem;
 }
 
-/*  */
-.purple-button {
-  background-color: var(--deep-purple);
+/* styling the cta button with a background color */
+.header-cta-button {
+  z-index: 1;
+  background: var(--deep-purple);
 }
 
-/*  */
+/* styling the hero container */
 .hero-container {
   margin-top: 2.37rem;
-  margin-bottom: 3.12rem;
 }
 
-/*  */
-.info h1 {
+/* styling the hero heading */
+.text-container h1 {
   font-size: 9.375vw;
   font-weight: var(--large-font);
 }
 
-/*  */
-.info p {
+/* styling the hero text */
+.text-container p {
   font-size: 1rem;
   color: var(--gray);
   margin-top: 1.62rem;
@@ -108,40 +109,42 @@ main {
   font-weight: var(--small-font);
 }
 
-/*  */
-.orange-button {
+/* styling the cta button with an orange gradient background */
+.hero-cta-button {
   height: 3.5rem;
   margin-top: 1.5rem;
   background: var(--orange-gradient);
 }
 
-/*  */
-picture {
-  display: flex;
+/* sstyling the hero image container */
+.image-container {
   height: 18.8125rem;
-  position: relative;
   margin-top: 2.88rem;
-  align-items: center;
-  justify-content: center;
 }
 
-/*  */
+/* styling the hero image wrapper */
+.image-wrapper {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+/* sizing the hero image within its parent wrapper */
 .hero-image {
-  scale: 110%;
   width: 100%;
   height: 100%;
   object-fit: cover;
   position: absolute;
 }
 
-/*  */
+/* styling the main section of the page */
 main {
   padding-top: 0;
   background: var(--bluish-gradient);
 }
 
-/*  */
-.mobile-heading {
+/* styling the main section's heading container */
+.main-heading-container {
   display: flex;
   height: 7.5rem;
   padding: 1.8rem;
@@ -151,19 +154,20 @@ main {
   background: var(--orange-gradient);
 }
 
-/*  */
-.mobile-heading h2 {
+/* styling the main section heading */
+.main-heading-container h2 {
   font-size: 1.5rem;
   line-height: 2rem;
   color: var(--white);
   font-weight: var(--large-font);
 }
 
+/* styling the orange grid box to not display on mobile screens */
 .orange-grid-box {
   display: none;
 }
 
-/*  */
+/* styling the cards for each course */
 .grid-box {
   padding: 0 1.81rem;
   position: relative;
@@ -174,13 +178,13 @@ main {
   border: 0.2px solid var(--pale-white);
 }
 
-/*  */
+/* stylin the course-card icon */
 .small-icons {
   position: absolute;
   margin-top: -1.75rem;
 }
 
-/* styling the course heading */
+/* styling the course-card heading */
 .grid-box h3 {
   margin-top: 3.5rem;
   font-size: 1.25rem;
@@ -188,7 +192,7 @@ main {
   color: var(--deep-purple);
 }
 
-/* styling the course text */
+/* styling the course-card text */
 .grid-box p {
   font-size: 1rem;
   color: var(--gray);
@@ -197,7 +201,7 @@ main {
   font-weight: var(--small-font);
 }
 
-/* styling the course link-text */
+/* styling the course-card cta text */
 .grid-box a {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -216,7 +220,7 @@ main {
 }
 
 /* Styling the footer cta button */
-.pop-button {
+.footer-cta-button {
   background: var(--pop-gradient);
 }
 
@@ -238,28 +242,38 @@ main {
   }
 
   /* setting the info container to take up half of the parent container's width */
-  .info {
+  .text-container {
     flex-basis: 50%;
-    /* background-color: orange; */
   }
 
   /* resizing the page heading to optimize viewing on tablets */
-  .info h1 {
+  .text-container h1 {
     font-size: 4.6875vw;
   }
 
   /* resizing the top margin of the hero text to optimize viewing on tablets */
-  .info p {
+  .text-container p {
     margin-top: 1.56rem;
   }
 
   /* setting the picture element to take up half of the parent container's width and removing the top margin */
-  picture {
+  .image-container {
+    height: auto;
     margin-top: 0;
     flex-basis: 50%;
-    /* background-color: pink; */
   }
 
+  /* styling the hero image to optimize viewing on tablets */
+  .hero-image {
+    top: -1rem;
+    scale: 280%;
+    width: 100%;
+    height: 100%;
+    right: -10rem;
+    position: absolute;
+    object-fit: contain;
+  }
+  
   /* restyling the main section to a 2-cloumn grid display to optimize viewing on tablets */
   main {
     gap: 0.7rem;
@@ -269,7 +283,7 @@ main {
   }
 
   /* resetting the mobile heading to not display on tablet screens */
-  .mobile-heading {
+  .main-heading-container {
     display: none;
   }
 
@@ -290,14 +304,7 @@ main {
 
 
 /* styling for dektops and large screens */
-@media screen and (min-width: 90rem) {
-  /* resizing the width of the header, main and footer sections to optimize viewing on large screens and dekstops */
-  header,
-  main,
-  footer {
-    width: 98vw;
-  }
-
+@media screen and (min-width: 80rem) {
   /* resizing the paddings on the header and main sections to optimize viewing on large screens and desktops */
   header,
   main {
@@ -310,34 +317,71 @@ main {
     height: 3.9375rem;
   }
 
+  /* restyling the header cta button to a different background on hover */
+  .header-cta-button:hover {
+    background: var(--purple);
+  }
+
+  /* resizing the top margin of the hero container */
+  .hero-container {
+    margin-top: 11.2rem;
+  }
+
   /* resizing the heading text to optimize viewing on large screens and desktops */
-  .info h1 {
+  .text-container h1 {
     font-size: 3.5rem;
   }
 
   /* resizing the top margin of the hero text to optimize viewing on large screens and desktops */
-  .info p {
+  .text-container p {
     margin-top: 1.81rem;
   }
 
-  /* resizing the top margin of the orange button to optimize viewing on large screens and desktops */
-  .orange-button {
-    margin-top: 2.5rem;
+  /* styling the hero image */
+  .hero-image {
+    top: -7rem;
+    scale: 280%;
+    width: 100%;
+    height: 100%;
+    right: -15rem;
+    position: absolute;
+    object-fit: contain;
   }
 
+  /* resizing the top margin of the orange button to optimize viewing on large screens and desktops */
+  .hero-cta-button {
+    margin-top: 2.5rem;
+  }
+  
   /* restyling the main section to a 3-cloumn grid display to optimize viewing on large screens and desktops */
   main {
     gap: 1.88rem;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  /* stlying some animation to display when the grid boxes are hovered on */
+  /* styling some animation to display when the grid boxes are hovered on */
   .course-box:hover {
     scale: 1.05;
-    background: var(--blue);
     transition: ease-in-out 2s;
+    background: var(--pop-gradient);
   }
-
+  
+  .course-box:hover .small-icons {
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+    border: 1.5px solid var(--yellow);
+  }
+  
+  .course-box:hover p {
+    color: var(--pale-white);
+    transition: ease-in 0.5s;
+  }
+  
+  .course-box:hover a {
+    color: var(--yellow);
+    transition: ease-in 0.5s;
+  }
+  
   /* restyling the paddings on the footer section to optimize viewing on large screens and desktops */
   #footer {
     padding: 0 10.32rem;
