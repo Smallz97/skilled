@@ -16,4 +16,4 @@
 .prettierignore
 
 # Removing the vscode setup
-.vscode
+vscode/

@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor Challenge Solution](https://www.frontendmentor.io/solutions/skilled-elearning-landing-page--APweIT3OE)
-- Live Site URL: [Live Site](https://smallz97.github.io/skilled/)
+- Solution URL: [Challenge Submission](https://www.frontendmentor.io/solutions/skilled-elearning-landing-page--APweIT3OE)
+- Live Site URL: [Skilled](https://smallz97.github.io/skilled/)
 
 ## My process
 
